@@ -1,0 +1,30 @@
+{
+  "name": "emotional-echo-backend",
+  "version": "1.0.0",
+  "description": "EchoVoid Backend API",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "prisma:generate": "npx prisma generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "echo",
+    "mood",
+    "social"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "prisma": "^5.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

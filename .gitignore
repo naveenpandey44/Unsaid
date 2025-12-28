@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/generated/prisma
+
+# backend sensitive files
+.env
+dev.db
+
+# prisma local files
+/prisma/dev.db
+

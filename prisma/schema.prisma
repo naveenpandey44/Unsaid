@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  content   String
+  mood      String
+  moodColor String
+  createdAt DateTime @default(now())
+  expiresAt DateTime @default(now()) @updatedAt
+  
+  @@map("posts")
+}
