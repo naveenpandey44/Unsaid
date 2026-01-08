@@ -1,46 +1,125 @@
-# Getting Started with Create React App
+🧠 Unsaid — Anonymous Mood Journal...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Unsaid is an anonymous, mood-based journaling web application built to help users express emotions freely without judgement, social pressure, or identity exposure. The platform focuses on emotional catharsis rather than engagement metrics like likes or comments.
 
-## Available Scripts
+🌙 About the Project....
 
-In the project directory, you can run:
+Many thoughts are felt deeply but never spoken aloud. Unsaid provides a quiet digital space where users can write what they feel, choose a mood that represents their emotion, and let the post fade away over time. The app is intentionally minimal, private, and temporary.
 
-### `npm start`
+✨ Features...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Anonymous posting (no login, no username)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Mood-based journaling (5 predefined moods)
 
-### `npm test`
+Real-time post updates using polling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Session-based owner delete system
 
-### `npm run build`
+Admin-level moderation delete
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend-level 24-hour post expiry
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Glassmorphism dark UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Fully responsive design (mobile & desktop)
 
-### `npm run eject`
+🎨 Frontend Stack.....
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React 18 for UI and component-based architecture
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+TypeScript for type safety
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Tailwind CSS for glassmorphism UI and responsive styling
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Vite for fast development server and HMR
 
-## Learn More
+Axios for API communication
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+React Hooks (useState, useEffect) for state and lifecycle management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧠 Backend Stack....
+
+Node.js for server-side runtime
+
+Express.js for REST API development
+
+Prisma ORM for type-safe database queries
+
+SQLite as a lightweight database
+
+JWT for anonymous session-based ownership validation
+
+CORS for secure frontend–backend communication
+
+🗄️ Database Schema (Simplified)...
+
+Post
+
+id
+
+content
+
+mood
+
+moodColor
+
+createdAt
+
+sessionId
+
+🗑️ Delete System....
+
+Owner Delete: A user can delete their own post if the session token matches.
+
+Admin Delete: Admin can delete any post using a secure admin key stored in environment variables, primarily for moderation purposes.
+
+⏰ Post Expiry Logic...
+
+Posts are filtered on the frontend using their creation timestamp (createdAt). Any post older than 24 hours is automatically hidden from the UI, reinforcing the idea of impermanence.
+
+🔐 Security & Privacy....
+
+No authentication system
+
+No user profiles or usernames
+
+Fully anonymous posting
+
+Session-based ownership verification
+
+Admin key managed via environment variables
+
+CORS enabled for controlled access
+
+🚀 Getting Started....
+
+Backend 
+cd backend
+npm install
+npm run dev
+
+
+Backend runs on:....
+
+http://localhost:5000
+
+Frontend .....
+cd frontend
+npm install
+npm start 
+
+
+Frontend runs on:...
+
+http://localhost:3000
+
+🎤 Project Summary.....
+
+Unsaid is an anonymous mood-based journaling application built using React 18 with Vite and Tailwind CSS on the frontend, and Node.js with Express, Prisma ORM, and SQLite on the backend. The app enables users to share emotions anonymously, supports session-based ownership and admin moderation, provides real-time updates via polling, and enforces frontend-level post expiry after 24 hours. The project prioritizes privacy, simplicity, and emotional expression over social engagement.
+
+📌 Author....
+
+Naveen Kumar
+B.Tech (CSE – AI & ML)
+Full-Stack Developer
